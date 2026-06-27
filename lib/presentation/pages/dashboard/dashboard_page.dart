@@ -590,7 +590,7 @@ class _MiniStatCard extends StatelessWidget {
     )
         .animate(delay: Duration(milliseconds: delay))
         .fadeIn(duration: 400.ms)
-        .scale(begin: const Offset(0.9, 0.9), curve: Curves.easeOut);
+        .scale(begin: 0.9, curve: Curves.easeOut);
   }
 }
 
