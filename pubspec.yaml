@@ -25,21 +25,9 @@ dependencies:
   retrofit: ^4.1.0
   web_socket_channel: ^2.4.5
 
-  # Firebase
-  firebase_core: ^2.30.1
-  firebase_auth: ^4.19.6
-  firebase_messaging: ^14.9.4
-  cloud_firestore: ^4.17.4
-
-  # Auth
-  google_sign_in: ^6.2.1
-  sign_in_with_apple: ^6.1.1
-
   # Storage
   flutter_secure_storage: ^9.0.0
   shared_preferences: ^2.2.3
-  hive_flutter: ^1.1.0
-  hive: ^2.2.3
 
   # UI
   flutter_animate: ^4.5.0
@@ -55,7 +43,7 @@ dependencies:
   flutter_local_notifications: ^17.1.2
 
   # Utils
-  intl: ^0.19.0
+  intl: ^0.20.0
   timeago: ^3.6.1
   url_launcher: ^6.2.5
   permission_handler: ^11.3.1
@@ -63,39 +51,18 @@ dependencies:
   package_info_plus: ^8.0.0
   device_info_plus: ^10.1.0
 
-  # Icons
-  hugeicons: ^0.0.7
-
   # Image
   image_picker: ^1.1.2
-
-  # Code generation
-  freezed_annotation: ^2.4.1
-  json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  build_runner: ^2.4.9
-  freezed: ^2.5.2
-  json_serializable: ^6.8.0
-  riverpod_generator: ^2.4.0
-  retrofit_generator: ^8.1.0
 
 flutter:
   uses-material-design: true
-  assets:
-    - assets/images/
-    - assets/animations/
-    - assets/icons/
-  fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
-        - asset: assets/fonts/Poppins-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Poppins-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/Poppins-Bold.ttf
-          weight: 700
+  # assets:  # Uncomment when asset files are added
+  #   - assets/images/
+  #   - assets/animations/
+  #   - assets/icons/
+  # fonts:  # Uncomment and add Poppins TTF files to assets/fonts/ to enable
