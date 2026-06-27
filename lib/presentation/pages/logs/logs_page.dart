@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/theme/app_theme.dart';
+import '../../../core/utils/extensions.dart';
 import '../../../data/models/log_model.dart';
 import '../../providers/websocket_provider.dart';
 import '../../widgets/log_entry_widget.dart';
@@ -143,7 +144,7 @@ class _LogsPageState extends ConsumerState<LogsPage> {
                     return Padding(
                       padding: const EdgeInsets.only(left: 6),
                       child: _CategoryChip(
-                        label: cat.name.capitalize(),
+                        label: cat.name.capitalize,
                         isSelected: isSelected,
                         color: _getCategoryColor(cat),
                         onTap: () => setState(() =>
@@ -167,7 +168,7 @@ class _LogsPageState extends ConsumerState<LogsPage> {
                   return Padding(
                     padding: const EdgeInsets.only(right: 6),
                     child: FilterChip(
-                      label: Text(sev.name.capitalize()),
+                      label: Text(sev.name.capitalize),
                       selected: isSelected,
                       onSelected: (_) => setState(() =>
                           _selectedSeverity = isSelected ? null : sev),
@@ -283,11 +284,6 @@ class _LogsPageState extends ConsumerState<LogsPage> {
         return AppColors.discordGreen;
     }
   }
-}
-
-extension StringCap on String {
-  String capitalize() =>
-      isNotEmpty ? '${this[0].toUpperCase()}${substring(1)}' : '';
 }
 
 class _CategoryChip extends StatelessWidget {
