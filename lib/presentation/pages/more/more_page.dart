@@ -119,7 +119,7 @@ class MorePage extends ConsumerWidget {
                   delegate: SliverChildBuilderDelegate(
                     (ctx, i) => _MoreCard(
                       item: _items[i],
-                    ).animate(delay: Duration(milliseconds: i * 60)).fadeIn(duration: 400.ms).scale(begin: 0.92),
+                    ).animate(delay: Duration(milliseconds: i * 60)).fadeIn(duration: 400.ms).scale(begin: const Offset(0.92, 0.92)),
                     childCount: _items.length,
                   ),
                 ),
